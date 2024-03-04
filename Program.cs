@@ -1,7 +1,19 @@
+using COMP_1640.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IOTimeout = TimeSpan.FromSeconds(30);
+    options.Cookie.IsEssential = true;
+});
+builder.Services.AddDbContext<ApplicationDBContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
