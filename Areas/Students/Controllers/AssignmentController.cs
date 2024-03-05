@@ -37,10 +37,6 @@ namespace COMP_1640.Areas.Students.Controllers
 
         }
 
-        //private async Task<IdentityUser> GetCurrentUser()
-        //{
-        //    return await _userManager.GetUserAsync(HttpContext.User);
-        //}
         public IActionResult AllFiles()
         {
             //Fetch all files in the Folder (Directory).
@@ -67,7 +63,6 @@ namespace COMP_1640.Areas.Students.Controllers
             //Send the File to Download.
             return File(bytes, "application/octet-stream", fileName);
         }
-        [Authorize(Roles = "Coordinator")]
         public FileResult Download()
         {
             var webRoot = _oIWebHostEnvironment.WebRootPath;
@@ -124,34 +119,10 @@ namespace COMP_1640.Areas.Students.Controllers
             return File(finalResult, "application/zip", fileName);
 
         }
-        [Authorize(Roles = "QA Coordinator")]
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _dbcontext.Assignment.Include(i => i.Id).Include(i => i.Status).Include(i => i.UserId);
+            var applicationDbContext = _dbcontext.Assignments.Include(i => i.Id).Include(i => i.Status);
             return View(await applicationDbContext.ToListAsync());
-        }
-
-        // GET: Ideas/Details/5
-        [Authorize(Roles = "Staff")]
-        public async Task<IActionResult> Details(int? id)
-        {
-
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var idea = await _dbcontext.Assignment
-                .Include(i => i.Id)
-                .Include(i => i.Status)
-                .Include(i => i.UserId)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (idea == null)
-            {
-                return NotFound();
-            }
-
-            return View(idea);
         }
     }
 }

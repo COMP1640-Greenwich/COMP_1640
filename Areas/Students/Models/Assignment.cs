@@ -11,6 +11,7 @@ namespace COMP_1640.Areas.Students.Models
         [Required]
         [MaxLength(255, ErrorMessage = "Title must be less than 255 chracters!")]
         public string Title { get; set; }
+        public List<AssigmentImage> Images { get; set; }
 
         [Required]
         public string Content { get; set; }
