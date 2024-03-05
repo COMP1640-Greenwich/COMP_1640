@@ -1,0 +1,39 @@
+﻿@model Assignment
+<h1> @(Model.Id == 0 ? "Create" : "Update") a @Model</h1>
+<form method="post" enctype="multipart/form-data">
+    <div class="row border p-3 mt-4">
+        <div class="col-6">
+            <input asp-for="@Model.Id" hidden />
+            <input asp-for="@Model.Id" hidden />
+            <div class="mb-3 row">
+                <label asp-for="@Model.Title"></label>
+                <input asp-for="@Model.Title">
+                <span asp-validation-for="@Model.Title" class="text-danger"></span>
+            </div>
+            <div class="mb-3 row">
+                <label asp-for="@Model.UrlImage"></label>
+                <input type="file" name="file" class="form-control" />
+
+            </div>
+            @if (@Model.Id == 0)
+            {
+                <button type="submit" class="btn btn-primary">Create</button>
+            }
+            else
+            {
+                <button type="submit" class="btn btn-info">Update</button>
+            }
+            <a asp-controller="@Model" asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+        <div class="col-6">
+            <img src="@Model.UrlImage" width="100%" />
+        </div>
+    </div>
+
+
+</form>
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
