@@ -10,6 +10,7 @@ namespace COMP_1640.Data
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Assignment> Assignments { get; set; }
+        public DbSet<FileModel> FileModes { get; set; }
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
         {
 
