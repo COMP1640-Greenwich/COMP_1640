@@ -35,9 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\" />
     <Folder Include="Areas\Coordinator\Controllers\" />
     <Folder Include="Areas\Coordinator\Data\" />
@@ -45,12 +43,15 @@
     <Folder Include="Areas\Coordinator\Views\" />
     <Folder Include="Areas\Customer\Controllers\" />
     <Folder Include="Areas\Customer\Data\" />
-    <Folder Include="Areas\Customer\Models\" />
     <Folder Include="Areas\Customer\Views\" />
     <Folder Include="Areas\Manager\Controllers\" />
     <Folder Include="Areas\Manager\Data\" />
     <Folder Include="Areas\Manager\Models\" />
     <Folder Include="Areas\Manager\Views\" />
+    <Folder Include="Areas\Students\Controllers\" />
+    <Folder Include="Areas\Students\Data\" />
+    <Folder Include="Areas\Students\Models\" />
+    <Folder Include="Areas\Students\Views\" />
   </ItemGroup>
 
 </Project>
