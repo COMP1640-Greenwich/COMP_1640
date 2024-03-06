@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Students\**" />
+    <Content Remove="Areas\Students\**" />
+    <EmbeddedResource Remove="Areas\Students\**" />
+    <None Remove="Areas\Students\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="ExcelDataReader" Version="3.6.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.0" />
@@ -44,7 +51,6 @@
     <Folder Include="Areas\Manager\Data\" />
     <Folder Include="Areas\Manager\Models\" />
     <Folder Include="Areas\Manager\Views\" />
-    <Folder Include="Areas\Students\Models\" />
   </ItemGroup>
 
 </Project>
