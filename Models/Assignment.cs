@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace COMP_1640.Areas.Students.Models
+namespace COMP_1640.Models
 {
     public class Assignment
     {
