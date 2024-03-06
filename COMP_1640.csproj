@@ -7,6 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Admin\**" />
+    <Compile Remove="Areas\Coordinator\**" />
+    <Compile Remove="Areas\Customer\**" />
+    <Compile Remove="Areas\Manager\**" />
+    <Content Remove="Areas\Admin\**" />
+    <Content Remove="Areas\Coordinator\**" />
+    <Content Remove="Areas\Customer\**" />
+    <Content Remove="Areas\Manager\**" />
+    <EmbeddedResource Remove="Areas\Admin\**" />
+    <EmbeddedResource Remove="Areas\Coordinator\**" />
+    <EmbeddedResource Remove="Areas\Customer\**" />
+    <EmbeddedResource Remove="Areas\Manager\**" />
+    <None Remove="Areas\Admin\**" />
+    <None Remove="Areas\Coordinator\**" />
+    <None Remove="Areas\Customer\**" />
+    <None Remove="Areas\Manager\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="ExcelDataReader" Version="3.6.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.2" />
@@ -26,25 +45,6 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.1" />
     <PackageReference Include="NETCore.MailKit" Version="2.1.0" />
     <PackageReference Include="SharpZipLib" Version="1.4.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Areas\Admin\Controllers\" />
-    <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\" />
-    <Folder Include="Areas\Coordinator\Controllers\" />
-    <Folder Include="Areas\Coordinator\Data\" />
-    <Folder Include="Areas\Coordinator\Models\" />
-    <Folder Include="Areas\Coordinator\Views\" />
-    <Folder Include="Areas\Customer\Controllers\" />
-    <Folder Include="Areas\Customer\Data\" />
-    <Folder Include="Areas\Customer\Models\" />
-    <Folder Include="Areas\Customer\Views\" />
-    <Folder Include="Areas\Manager\Controllers\" />
-    <Folder Include="Areas\Manager\Data\" />
-    <Folder Include="Areas\Manager\Models\" />
-    <Folder Include="Areas\Manager\Views\" />
   </ItemGroup>
 
 </Project>

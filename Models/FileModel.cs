@@ -1,4 +1,4 @@
-﻿namespace COMP_1640.Areas.Students.Models
+﻿namespace COMP_1640.Models
 {
     public class FileModel
     {

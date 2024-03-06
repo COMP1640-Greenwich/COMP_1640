@@ -1,0 +1,33 @@
+﻿﻿
+@using COMP_1640.Models
+@model List<FileModel>
+
+@{
+    ViewData["Title"] = "AllFiles";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title class="font-weight-bold">Index</title>
+</head>
+<body class="border border-info w-100">
+    <table>
+        <tr class="border-bottom">
+            <th>File Name</th>
+            <th>
+                Actions
+            </th>
+        </tr>
+        @foreach (FileModel file in Model)
+        {
+            <tr class="border-bottom">
+                <td>@file.FileName</td>
+                <td>@Html.ActionLink("Download", "DownloadFile", new { fileName = file.FileName })</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
